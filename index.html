@@ -1779,7 +1779,7 @@
                 extensions.callouts?.forEach(ext => { if(ext.text) csvRows.push(createCsvRow({ ...levelData, 'Callout text': ext.text }, headers)); });
                 extensions.snippets?.forEach(ext => {
                     if(ext.values && ext.values.length > 0) {
-                        const snippetValues = ext.values.join(';');
+                        const snippetValues = ext.values.join('\n');
                         csvRows.push(createCsvRow({ ...levelData, 'Header': ext.header, 'Snippet Values': snippetValues }, headers));
                     }
                 });
